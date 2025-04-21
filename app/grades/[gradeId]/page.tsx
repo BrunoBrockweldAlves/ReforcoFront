@@ -169,4 +169,3 @@ const grades = [
   },
   // Other grades would be defined similarly
 ]
-

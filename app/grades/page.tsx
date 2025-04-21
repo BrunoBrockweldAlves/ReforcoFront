@@ -151,4 +151,3 @@ const grades = [
     topics: 36,
   },
 ]
-

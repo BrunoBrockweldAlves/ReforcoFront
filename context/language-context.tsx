@@ -63,6 +63,16 @@ const translations: Record<string, Record<string, string>> = {
     login: "Login",
     signup: "Sign Up",
 
+    // Theme selector
+    theme: "Theme",
+    theme_pink: "Pink",
+    theme_blue: "Blue",
+    theme_green: "Green",
+    theme_purple: "Purple",
+    theme_orange: "Orange",
+    theme_dark: "Dark",
+    theme_pastel: "Pastel",
+
     // Topic description page
     topic_description: "Topic Description",
     examples: "Examples",
@@ -246,6 +256,71 @@ const translations: Record<string, Record<string, string>> = {
 
     // New translations
     take_exercises_to_practice: "Take some exercises to practice the concept below:",
+
+    // New translations for filter system
+    explore_topics: "Explore Topics",
+    find_topics_to_learn: "Find topics to learn across all subjects and grades",
+    by_subject: "By Subject",
+    by_grade: "By Grade",
+    search_topics: "Search topics...",
+    filters: "Filters",
+    topic_types: "Topic Types",
+    reset_filters: "Reset Filters",
+    apply_filters: "Apply Filters",
+    clear_all: "Clear All",
+    topics_found: "topics found",
+    start_learning: "Start Learning",
+    curated_collections: "Curated Collections",
+    explore_collection: "Explore Collection",
+    more: "more",
+
+    // Topic types
+    topic_type_counting: "Counting",
+    topic_type_addition: "Addition",
+    topic_type_subtraction: "Subtraction",
+    topic_type_multiplication: "Multiplication",
+    topic_type_division: "Division",
+    topic_type_fractions: "Fractions",
+    topic_type_decimals: "Decimals",
+    topic_type_geometry: "Geometry",
+    topic_type_algebra: "Algebra",
+    topic_type_functions: "Functions",
+    topic_type_ratios: "Ratios",
+    topic_type_other: "Other",
+
+    // Collections
+    beginner_math: "Beginner Mathematics",
+    beginner_math_desc: "Fundamental math concepts for beginners",
+    addition_subtraction: "Addition & Subtraction",
+    addition_subtraction_desc: "Master the basics of addition and subtraction",
+
+    // Add these new translations to the existing translations object
+    view_all_exercises: "View All Exercises",
+    practice_and_learn: "Practice and learn with these exercises",
+    search: "Search",
+    search_exercises: "Search exercises...",
+    difficulty: "Difficulty",
+    categories: "Categories",
+    exercises_found: "exercises found",
+    no_exercises_found: "No exercises found",
+    try_adjusting_filters: "Try adjusting your filters or search criteria",
+    back_to_exercises: "Back to Exercises",
+    previous_exercise: "Previous Exercise",
+    next_exercise: "Next Exercise",
+    complete_exercises: "Complete Exercises",
+    start_exercise: "Start Exercise",
+
+    // Difficulty levels
+    difficulty_easy: "Easy",
+    difficulty_medium: "Medium",
+    difficulty_hard: "Hard",
+
+    // Categories
+    category_visual_counting: "Visual Counting",
+    category_number_sequence: "Number Sequence",
+    category_skip_counting: "Skip Counting",
+    category_real_life_counting: "Real-life Counting",
+    category_addition_counting: "Addition Counting",
   },
   "pt-BR": {
     // Navigation
@@ -260,6 +335,16 @@ const translations: Record<string, Record<string, string>> = {
     logout: "Sair",
     login: "Entrar",
     signup: "Cadastrar",
+
+    // Theme selector
+    theme: "Tema",
+    theme_pink: "Rosa",
+    theme_blue: "Azul",
+    theme_green: "Verde",
+    theme_purple: "Roxo",
+    theme_orange: "Laranja",
+    theme_dark: "Escuro",
+    theme_pastel: "Pastel",
 
     // Topic description page
     topic_description: "Descrição do Tópico",
@@ -451,6 +536,70 @@ const translations: Record<string, Record<string, string>> = {
 
     // New translations
     take_exercises_to_practice: "Faça alguns exercícios para praticar o conceito abaixo:",
+
+    // New translations for filter system
+    explore_topics: "Explorar Tópicos",
+    find_topics_to_learn: "Encontre tópicos para aprender em todas as disciplinas e séries",
+    by_subject: "Por Disciplina",
+    by_grade: "Por Série",
+    search_topics: "Buscar tópicos...",
+    filters: "Filtros",
+    topic_types: "Tipos de Tópicos",
+    reset_filters: "Redefinir Filtros",
+    apply_filters: "Aplicar Filtros",
+    clear_all: "Limpar Tudo",
+    topics_found: "tópicos encontrados",
+    start_learning: "Começar a Aprender",
+    curated_collections: "Coleções Selecionadas",
+    explore_collection: "Explorar Coleção",
+    more: "mais",
+
+    // Topic types
+    topic_type_counting: "Contagem",
+    topic_type_addition: "Adição",
+    topic_type_subtraction: "Subtração",
+    topic_type_multiplication: "Multiplicação",
+    topic_type_division: "Divisão",
+    topic_type_fractions: "Frações",
+    topic_type_decimals: "Decimais",
+    topic_type_geometry: "Álgebra",
+    topic_type_algebra: "Álgebra",
+    topic_type_functions: "Funções",
+    topic_type_ratios: "Razões",
+    topic_type_other: "Outros",
+
+    // Collections
+    beginner_math: "Matemática para Iniciantes",
+    beginner_math_desc: "Conceitos fundamentais de matemática para iniciantes",
+    addition_subtraction: "Adição e Subtração",
+    addition_subtraction_desc: "Domine o básico da adição e subtração",
+
+    // Add these new translations to the existing translations object
+    view_all_exercises: "Ver Todos os Exercícios",
+    practice_and_learn: "Pratique e aprenda com estes exercícios",
+    search: "Buscar",
+    search_exercises: "Buscar exercícios...",
+    difficulty: "Dificuldade",
+    categories: "Categorias",
+    exercises_found: "exercícios encontrados",
+    no_exercises_found: "Nenhum exercício encontrado",
+    try_adjusting_filters: "Tente ajustar seus filtros ou critérios de busca",
+    back_to_exercises: "Voltar para Exercícios",
+    previous_exercise: "Exercício Anterior",
+    next_exercise: "Próximo Exercício",
+    complete_exercises: "Completar Exercícios",
+    start_exercise: "Iniciar Exercício",
+
+    // Difficulty levels
+    difficulty_easy: "Fácil",
+    difficulty_medium: "Médio",
+    difficulty_hard: "Difícil",
+
+    // Categories
+    category_visual_counting: "Contagem Visual",
+    category_number_sequence: "Sequência Numérica",
+    category_skip_counting: "Contagem por Saltos",
+    category_real_life_counting: "Contagem na Vida Real",
+    category_addition_counting: "Contagem com Adição",
   },
 }
-

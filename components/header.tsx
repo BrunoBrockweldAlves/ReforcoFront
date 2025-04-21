@@ -1,11 +1,11 @@
 "use client"
-
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { BookOpen, Menu, User, LogIn } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { LanguageSelector } from "@/components/language-selector"
+import { ThemeSelector } from "@/components/theme-selector"
 import { useLanguage } from "@/context/language-context"
 import { useAuth } from "@/context/auth-context"
 import {
@@ -30,27 +30,27 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2">
-            <BookOpen className="h-6 w-6 text-pink-500" />
-            <span className="text-xl font-bold">Kids Learning Hub</span>
+      <div className="container flex h-14 sm:h-16 items-center justify-between px-4 md:px-6">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <Link href="/" className="flex items-center gap-1 sm:gap-2">
+            <BookOpen className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+            <span className="text-lg sm:text-xl font-bold truncate">Kids Learning Hub</span>
           </Link>
         </div>
 
-        <nav className="hidden md:flex gap-6">
-          <Link href="/" className={`text-sm font-medium ${isActive("/") ? "text-pink-500" : "hover:text-primary"}`}>
+        <nav className="hidden md:flex gap-4 lg:gap-6">
+          <Link href="/" className={`text-sm font-medium ${isActive("/") ? "text-primary" : "hover:text-primary"}`}>
             {t("home")}
           </Link>
           <Link
             href="/subjects"
-            className={`text-sm font-medium ${isActive("/subjects") ? "text-pink-500" : "hover:text-primary"}`}
+            className={`text-sm font-medium ${isActive("/subjects") ? "text-primary" : "hover:text-primary"}`}
           >
             {t("subjects")}
           </Link>
           <Link
             href="/grades"
-            className={`text-sm font-medium ${isActive("/grades") ? "text-pink-500" : "hover:text-primary"}`}
+            className={`text-sm font-medium ${isActive("/grades") ? "text-primary" : "hover:text-primary"}`}
           >
             {t("grades")}
           </Link>
@@ -62,14 +62,15 @@ export function Header() {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <ThemeSelector />
           <LanguageSelector />
 
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full">
-                  <User className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="rounded-full h-8 w-8 sm:h-9 sm:w-9">
+                  <User className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
@@ -84,31 +85,28 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <Button asChild variant="ghost" size="icon" className="rounded-full">
+            <Button asChild variant="ghost" size="icon" className="rounded-full h-8 w-8 sm:h-9 sm:w-9">
               <Link href="/login">
-                <LogIn className="h-5 w-5" />
+                <LogIn className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </Button>
           )}
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="md:hidden h-8 w-8 sm:h-9 sm:w-9">
+                <Menu className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="w-[75vw] sm:max-w-sm">
               <div className="grid gap-4 py-4">
-                <Link href="/" className={`text-sm font-medium ${isActive("/") ? "text-pink-500" : ""}`}>
+                <Link href="/" className={`text-sm font-medium ${isActive("/") ? "text-primary" : ""}`}>
                   {t("home")}
                 </Link>
-                <Link
-                  href="/subjects"
-                  className={`text-sm font-medium ${isActive("/subjects") ? "text-pink-500" : ""}`}
-                >
+                <Link href="/subjects" className={`text-sm font-medium ${isActive("/subjects") ? "text-primary" : ""}`}>
                   {t("subjects")}
                 </Link>
-                <Link href="/grades" className={`text-sm font-medium ${isActive("/grades") ? "text-pink-500" : ""}`}>
+                <Link href="/grades" className={`text-sm font-medium ${isActive("/grades") ? "text-primary" : ""}`}>
                   {t("grades")}
                 </Link>
                 <Link href="/#how-it-works" className="text-sm font-medium">
@@ -143,4 +141,3 @@ export function Header() {
     </header>
   )
 }
-
